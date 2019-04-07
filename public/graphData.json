@@ -1,1 +1,19 @@
-{"nodes":[{"name":"Myriel","group":1},{"name":"Napoleon","group":1},{"name":"Mlle.Baptistine","group":1}]}
+{
+    "nodes": [
+
+      {"id": "Maritime", "group": 1},
+      {"id": "Mechanical Design", "group": 3},
+      {"id": "Coding", "group": 2},
+      {"id": "Environmentalism", "group": 4},
+      {"id": "Alternative Energy", "group": 4},
+      {"id": "Entrepeneurship", "group": 5},
+      
+      {"id": "Github", "group": 2}  
+    ],
+    "links": [
+      {"source": "Maritime", "target": "Mechanical Design", "value": 1},
+      {"source": "Mechanical Design", "target": "Coding", "value": 8},
+      {"source": "Alternative Energy", "target": "Environmentalism", "value": 8},
+      {"source": "Github", "target": "Coding", "value": 8}
+    ]
+  }

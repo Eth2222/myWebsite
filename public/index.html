@@ -52,7 +52,7 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="D3Test.html">Link</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -104,6 +104,19 @@
     </div>
     <p id="load">Firebase SDK Loading&hellip;</p>
 
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDnCfT9FKOczIx6pRMOxdTG0uqRS9HeD3g",
+        authDomain: "mywebsite-230515.firebaseapp.com",
+        databaseURL: "https://mywebsite-230515.firebaseio.com",
+        projectId: "mywebsite-230515",
+        storageBucket: "mywebsite-230515.appspot.com",
+        messagingSenderId: "496155371032"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
