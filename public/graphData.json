@@ -1,6 +1,6 @@
 {
     "nodes": [
-
+    
       {"id": "Maritime", "group": 1},
       {"id": "Mechanical Design", "group": 3},
       {"id": "Coding", "group": 2},
@@ -8,7 +8,9 @@
       {"id": "Alternative Energy", "group": 4},
       {"id": "Entrepeneurship", "group": 5},
       
-      {"id": "Github", "group": 2}  
+      {"id": "Github", "group": 2},  
+      {"id": "Data Visualization", "group": 2}, 
+      {"id": "Print Lab Project", "group": 2} 
     ],
     "links": [
       {"source": "Maritime", "target": "Mechanical Design", "value": 1},

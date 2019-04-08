@@ -7,7 +7,7 @@
     <title>Ethan Merrill</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -20,7 +20,19 @@
     <script defer src="/__/firebase/5.8.2/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDnCfT9FKOczIx6pRMOxdTG0uqRS9HeD3g",
+        authDomain: "mywebsite-230515.firebaseapp.com",
+        databaseURL: "https://mywebsite-230515.firebaseio.com",
+        projectId: "mywebsite-230515",
+        storageBucket: "mywebsite-230515.appspot.com",
+        messagingSenderId: "496155371032"
+      };
+      firebase.initializeApp(config);
+    </script>
     <style media="screen">
       body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
       #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
@@ -37,8 +49,6 @@
     </style>
   </head>
 
-
-  
   <!--NAVBAR-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Ethan Merrill</a>
@@ -77,7 +87,12 @@
   </nav>
 
   <body>
-    
+    <div class = "mx-auto">
+      <div class="text-center", style="padding: 10px">
+          <a href="D3Test.html">
+            <button type="button" class="btn btn-raised btn-primary">Force Directed Graph</button>
+          </a>
+    </div>
     
     </script>
     
@@ -86,37 +101,35 @@
         <div class ="col-lg">
           <h1 class = "text-center">My First Bootstrap Page</h1>
           <p class = "text-center">This is really, my second bootstrap page, but its the first one which I will 
-            actually build something from </p> 
+            actually build something from</p> 
         </div>
       </div>
     </div>
-    <div class = "mx-auto" style = "width:90%">
-      <div class="card", style = "width:40%">
-          <div class="card-body">Basic cardThbis is where information about my project will go </div>
-          <a href="polymerTest.html" class="btn btn-primary streached-link" style = "width: 80%">This is a link to see more about the project</a>
+    <div class="row">
+      <div class="col">
+        <div class = "mx-auto" style = "width:90%">
+          <div class="card", style = "width:30%">
+            <div class="card-body">Basic cardThis is where information about my project will go </div>
+              <div class ="mx-auto">
+                  <a href="polymerTest.html" class="btn btn-primary" style = "width: 80%">This is a link to see more about the project</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+        <div class="col">
+          <div class = "mx-auto" style = "width:90%">
+            <div class="card", style = "width:30%">
+              <div class="card-body">Basic cardThis is where information about my project will go </div>
+                <div class ="mx-auto">
+                  <a href="polymerTest.html" class="btn btn-primary" style = "width: 80%">This is a link to see more about the project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDnCfT9FKOczIx6pRMOxdTG0uqRS9HeD3g",
-        authDomain: "mywebsite-230515.firebaseapp.com",
-        databaseURL: "https://mywebsite-230515.firebaseio.com",
-        projectId: "mywebsite-230515",
-        storageBucket: "mywebsite-230515.appspot.com",
-        messagingSenderId: "496155371032"
-      };
-      firebase.initializeApp(config);
-    </script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
