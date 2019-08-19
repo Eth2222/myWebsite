@@ -1,3 +1,6 @@
+.firebaserc
+firebasePrivate.js
+firebasePrivate.html
 # Logs
 logs
 *.log
