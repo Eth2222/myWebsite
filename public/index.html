@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang = "en">
-   
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ethan Merrill</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -22,133 +23,267 @@
     <script defer src="/__/firebase/init.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDnCfT9FKOczIx6pRMOxdTG0uqRS9HeD3g",
-        authDomain: "mywebsite-230515.firebaseapp.com",
-        databaseURL: "https://mywebsite-230515.firebaseio.com",
-        projectId: "mywebsite-230515",
-        storageBucket: "mywebsite-230515.appspot.com",
-        messagingSenderId: "496155371032"
-      };
-      firebase.initializeApp(config);
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDnCfT9FKOczIx6pRMOxdTG0uqRS9HeD3g",
+            authDomain: "mywebsite-230515.firebaseapp.com",
+            databaseURL: "https://mywebsite-230515.firebaseio.com",
+            projectId: "mywebsite-230515",
+            storageBucket: "mywebsite-230515.appspot.com",
+            messagingSenderId: "496155371032"
+        };
+        firebase.initializeApp(config);
     </script>
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
 
-  <!--NAVBAR-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+</head>
+
+<!--NAVBAR-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Ethan Merrill</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="D3Test.html">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="D3Test.html">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropdown
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
     </div>
-  </nav>
+</nav>
 
-  <body>
-    <div class = "mx-auto">
-      <div class="text-center", style="padding: 10px">
-          <a href="D3Test.html">
-            <button type="button" class="btn btn-raised btn-primary">Force Directed Graph</button>
-          </a>
-    </div>
-    
-    </script>
-    
-    <div class="container-fluid">
-      <div class="row">
-        <div class ="col-lg">
-          <h1 class = "text-center">My First Bootstrap Page</h1>
-          <p class = "text-center">This is really, my second bootstrap page, but its the first one which I will 
-            actually build something from</p> 
+<body>
+    <div class="mx-auto">
+        <div class="text-center" , style="padding: 10px">
+            <a href="D3Test.html">
+                <button type="button" class="btn btn-raised btn-primary">Force Directed Graph</button>
+            </a>
         </div>
-      </div>
-    </div>
-    <div class = "row">
-      <div class="col-sm">
-        <div class = "mx-auto" style = "width:90%">
-          <div class="card", style = "width:100%">
-            <div class="card-body">Basic cardThis is where information about my project will go </div>
-              <div class ="mx-auto">
-                  <a href="polymerTest.html" class="btn btn-primary" style = "width: 80%">This is a link to see more about the project</a>
-              </div>
+
+        </script>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg">
+                    <h1 class="text-center">My First Bootstrap Page</h1>
+                    <p class="text-center">This is really, my second bootstrap page, but its the first one which I will actually build something from</p>
+                </div>
             </div>
-          </div>
         </div>
-    <div class="col-sm">
-      <div class = "mx-auto" style = "width:90%">
-        <div class="card", style = "width:100%">
-          <div class="card-body">Basic cardThis is where information about my project will go </div>
-            <div class ="mx-auto">
-                <a href="polymerTest.html" class="btn btn-primary" style = "width: 80%">This is a link to see more about the project</a>
+        <div class="row">
+            <div class="col-sm">
+                <div class="mx-auto" style="width:90%">
+                    <div class="card" , style="width:100%">
+                        <div class="card-body">Basic cardThis is where information about my project will go </div>
+                        <div class="mx-auto">
+                            <a href="polymerTest.html" class="btn btn-primary" style="width: 80%">This is a link to see more about the project</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="col-sm">
+                <div class="mx-auto" style="width:90%">
+                    <div class="card" , style="width:100%">
+                        <div class="card-body">Basic cardThis is where information about my project will go </div>
+                        <div class="mx-auto">
+                            <a href="polymerTest.html" class="btn btn-primary" style="width: 80%">This is a link to see more about the project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <html xmlns:xlink="http://www.w3.org/1999/xlink">
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+        </html>
+        <svg width="960" height="600" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+            var svg = d3.select("svg"),
+                width = +svg.attr("width"),
+                height = +svg.attr("height");
+
+            var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+            var simulation = d3.forceSimulation()
+                .force("link", d3.forceLink().id(function(d) {
+                    return d.id;
+                }))
+                .force("charge", d3.forceManyBody())
+                .force("center", d3.forceCenter(width / 2, height / 2));
+
+            d3.json("graphData.json", function(error, graph) {
+                if (error) throw error;
+
+                var link = svg.append("g")
+                    .attr("class", "links")
+                    .selectAll("line")
+                    .data(graph.links)
+                    .enter().append("line")
+                    .attr("stroke-width", function(d) {
+                        return Math.sqrt(d.value);
+                    });
+
+                var node = svg.append("g")
+                    .attr("class", "nodes")
+                    .selectAll("g")
+                    .data(graph.nodes)
+                    .enter().append("g")
+                    .call(force.drag);
+
+                var circles = node.append("circle")
+                    .attr("r", 5)
+                    .attr("fill", function(d) {
+                        return color(d.group);
+                    })
+
+                var hyperlink = node.append("svg:a")
+                    .text(function(d) {
+                        return d.id;
+                    })
+                    .attr("xlink:href", function(d) {
+                        return ("xlink:href", d.url)
+                    })
+                    .append("text")
+                    .attr('x', 6)
+                    .attr('y', 3)
+                    .text(function(d) {
+                        return d.id;
+                    })
+                    .append("circle")
+                    .attr("r", 4)
+                    .style("fill", "#666")
+                    .style("opacity", 0.5)
+
+                node.append("title")
+                    .text(function(d) {
+                        return d.id;
+                    });
+
+                simulation
+                    .nodes(graph.nodes)
+                    .on("tick", tick);
+
+                simulation.force("link")
+                    .links(graph.links);
+
+                var node_drag = d3.behavior.drag()
+                    .on("dragstart", dragstart)
+                    .on("drag", dragmove)
+                    .on("dragend", dragend);
+
+                function tick() {
+                    link
+                        .attr("x1", function(d) {
+                            return d.source.x;
+                        })
+                        .attr("y1", function(d) {
+                            return d.source.y;
+                        })
+                        .attr("x2", function(d) {
+                            return d.target.x;
+                        })
+                        .attr("y2", function(d) {
+                            return d.target.y;
+                        });
+
+                    node
+                        .attr("transform", function(d) {
+                            return "translate(" + d.x + "," + d.y + ")";
+                        })
+                }
+            });
+            /*
+            var dragDrop = d3.drag().on('start',function(node) {
+              if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+
+            })*/
+            function dragstart(d, i) {
+                if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+                svg.selectAll("circle").each(function(d) {
+                    d.fx = d.x;
+                    d.fy = d.y;
+                    tick()
+                })
+            }
+
+            function dragmove(d, i) {
+                d.fx = d3.event.x;
+                d.fy = d3.event.y;
+                tick();
+            }
+
+            function dragend(d, i) {
+                simulation.alphaTarget(0);
+                d.fx = null;
+                d.fy = null;
+                tick();
+            }
+            /*
+            var dragDrop = d3.drag().on('start', function(node) {
+    if (!d3.event.active) simulation.alphaTarget(0.7).restart()
+    svg.selectAll("circle").each(function(d){
+      d.fx = d.x
+      d.fy = d.y
+    })
+}).on('drag', function(node) {
+    node.fx = d3.event.x
+    node.fy = d3.event.y
+}).on('end', function(node) {
+    if (!d3.event.active) {
+        simulation.alphaTarget(0)
+    }
+    node.fx = null
+    node.fy = null
+})
+*/
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+                // // The Firebase SDK is initialized and available here!
+                //
+                // firebase.auth().onAuthStateChanged(user => { });
+                // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+                // firebase.messaging().requestPermission().then(() => { });
+                // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+                //
+                // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+                try {
+                    let app = firebase.app();
+                    let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+                    document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+                } catch (e) {
+                    console.error(e);
+                    document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+                }
+            });
+        </script>
+</body>
+
 </html>
