@@ -107,6 +107,7 @@
                 height = +svg.attr("height");
 
             var color = d3.scaleOrdinal(d3.schemeCategory20);
+            var nodes = {};
 
             var simulation = d3.forceSimulation()
                 .force("link", d3.forceLink().id(function(d) {
@@ -117,6 +118,14 @@
 
             d3.json("graphData.json", function(error, graph) {
                 if (error) throw error;
+                var force = d3.layout.force()
+                    .nodes(d3.values(nodes))
+                    // .link(link)
+                    .size([width, height])
+                    // .linkDistance(60)
+                    .charge(-300)
+                    .on("tick", tick)
+                    //.start();
 
                 var link = svg.append("g")
                     .attr("class", "links")
@@ -243,26 +252,26 @@
         </script>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-                // // The Firebase SDK is initialized and available here!
-                //
-                // firebase.auth().onAuthStateChanged(user => { });
-                // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-                // firebase.messaging().requestPermission().then(() => { });
-                // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-                //
-                // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+            // document.addEventListener('DOMContentLoaded', function() {
+            //     // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+            //     // // The Firebase SDK is initialized and available here!
+            //     //
+            //     // firebase.auth().onAuthStateChanged(user => { });
+            //     // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+            //     // firebase.messaging().requestPermission().then(() => { });
+            //     // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+            //     //
+            //     // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-                try {
-                    let app = firebase.app();
-                    let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-                    document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-                } catch (e) {
-                    console.error(e);
-                    document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-                }
-            });
+            //     try {
+            //         let app = firebase.app();
+            //         let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+            //         document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+            //     } catch (e) {
+            //         console.error(e);
+            //         document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+            //     }
+            // });
         </script>
 </body>
 
